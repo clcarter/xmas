@@ -49,8 +49,6 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "baseHref": "https://t0f3rchr15.github.io/xmas/",
-              "deployUrl": "https://t0f3rchr15.github.io/xmas/",
               "budgets": [
                 {
                   "type": "initial",

@@ -1,0 +1,33 @@
+@import '~@angular/material/theming';
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import './theme.scss';
+
+@include mat-core();
+
+$xmas-theme: mat-light-theme($xmas-red, $xmas-green, $xmas-gold);
+
+@include angular-material-theme($xmas-theme);
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Fredericka the Great',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+@include mat-toolbar-typography($custom-typography);
+
+body:after {
+
+  opacity: 0.2;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  background: url('assets/svg/xmas-leaves-orn.svg') center center no-repeat;
+  background-size: contain;
+  content: '';
+  font-size: 100vw;
+  line-height: 100vh;
+}

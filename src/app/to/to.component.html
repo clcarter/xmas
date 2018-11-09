@@ -1,0 +1,12 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="end center">
+  <button mat-icon-button color="accent" [routerLink]="['/']"><mat-icon>close</mat-icon></button>
+</mat-toolbar>
+<main fxLayout="column" fxLayoutAlign="space-around center" [style.height.vh]="95">
+<ng-container *ngIf="gifts | async as its">
+  <h2>{{its.from}},</h2>
+  <p>you have</p>
+  <h1>{{its.to}}</h1>
+</ng-container>
+</main>
+
+

@@ -1,0 +1,26 @@
+mat-card {
+    background: transparent;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+mat-icon.tag {
+    height: 9rem;
+    width: auto;
+}
+
+mat-card-title {
+    font-size: 4rem !important;
+    text-align: center;
+}
+
+mat-toolbar {
+  h1 {
+    font-size: 2rem;
+  }
+    background: transparent;
+    p {
+        font-size: 1rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+}

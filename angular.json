@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/xmas",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -64,7 +65,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "xmas:build",
-            "host": "10.8.1.55"
+            "optimization": true
           },
           "configurations": {
             "production": {

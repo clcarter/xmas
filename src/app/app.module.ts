@@ -11,6 +11,9 @@ import { HomeComponent } from './home/home.component'
 import { GiftService } from './gift.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -21,10 +24,13 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule,
     AppRoutingModule,
     UiModule,
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    //AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [GiftService],
   bootstrap: [AppComponent]

@@ -144,5 +144,10 @@
       }
     }
   },
-  "defaultProject": "xmas"
+  "defaultProject": "xmas",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

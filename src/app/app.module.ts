@@ -11,11 +11,12 @@ import { HomeComponent } from './home/home.component'
 import { GiftService } from './gift.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
+// import { AngularFireModule } from '@angular/fire';
+// import { AngularFirestoreModule } from '@angular/fire/firestore';
+// import { AngularFireAuthModule } from '@angular/fire/auth';
+// import { StoreModule } from '@ngrx/store';
+// import { reducers, metaReducers } from './reducers';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -25,21 +26,22 @@ import { reducers, metaReducers } from './reducers';
   ],
   imports: [
     BrowserAnimationsModule,
-    BrowserModule,
-    AngularFirestoreModule,
-    AngularFireAuthModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    // AngularFirestoreModule,
+    // AngularFireAuthModule,
     AppRoutingModule,
     UiModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    StoreModule.forRoot(reducers, {
-      metaReducers,
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true
-      }
-    }),
-    //AngularFireModule.initializeApp(environment.firebase),
+    // StoreModule.forRoot(reducers, {
+    //   metaReducers,
+    //   runtimeChecks: {
+    //     strictStateImmutability: true,
+    //     strictActionImmutability: true
+    //   }
+    // }),
+    RouterModule,
+    // AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [GiftService],
   bootstrap: [AppComponent]

@@ -4,7 +4,6 @@ import {
   MatAutocompleteModule, MatButtonModule, MatCardModule, MatExpansionModule,
   MatIconModule, MatProgressSpinnerModule, MatToolbarModule, MatIconRegistry
 } from '@angular/material'
-import {FlexLayoutModule} from '@angular/flex-layout';
 import { DomSanitizer } from '@angular/platform-browser';
 
 const MaterialUi = [
@@ -15,7 +14,6 @@ const MaterialUi = [
   MatButtonModule,
   MatProgressSpinnerModule,
   MatToolbarModule,
-  FlexLayoutModule
 ]
 
 @NgModule({

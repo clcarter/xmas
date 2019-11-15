@@ -24,9 +24,11 @@ export interface DisplayGifters {
 export class GiftService {
 
   constructor(private http: HttpClient) { }
+
   getGifters(): Observable<DisplayGifters[]> {
     return this.http.get<Gifters>(`assets/family.json`).pipe(map((data: Gifters) => this.createArray(data.carter.gifters)))
   }
+
   private createArray(gifters): DisplayGifters[] {
     return Object.keys(gifters).map(from => ({from, to: gifters[from]}))
   }

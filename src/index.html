@@ -11,9 +11,20 @@
   <meta name="theme-color" content="#1976d2">
   <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#1976d2">
+  <link rel="stylesheet" href="https://use.typekit.net/ajp7lho.css">
 </head>
 <body>
   <xmas-root></xmas-root>
+  <script>
+      const el = document.getElementById('colorMatrix');
+      if (el) {
+        let val = el.getAttribute('values');
+        val = val + Math.floor(Math.random() * 100);
+        setInterval(() => {
+          el.setAttribute('values', val++);
+        }, 600)
+    }
+    </script>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>

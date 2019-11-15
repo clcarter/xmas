@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  MatAutocompleteModule, MatButtonModule, MatCardModule, MatExpansionModule,
-  MatIconModule, MatProgressSpinnerModule, MatToolbarModule, MatIconRegistry
-} from '@angular/material'
+import { MatButtonModule } from '@angular/material/button'
+import { MatCardModule } from '@angular/material/card'
+import { MatAutocompleteModule } from '@angular/material/autocomplete'
+import { MatExpansionModule } from '@angular/material/expansion'
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon'
+import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
 import { DomSanitizer } from '@angular/platform-browser';
 
 const MaterialUi = [

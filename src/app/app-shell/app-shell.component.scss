@@ -12,26 +12,6 @@ xmas-app-shell {
   svg {
     width: 80vw;
     max-height: 80vh;
+    transition: 0.3s ease-in all;
   }
-  
-//   path {
-//     animation: sparkle 10s linear 10s infinite alternate;
-//   }
-// }
-// @keyframes sparkle {
-//   0% {
-//     fill: initial;
-//   }
-//   20% {
-//     fill: #ffffff;
-//   }
-//   50% {
-//     fill: #ff0900;
-//   }
-//   75% {
-//     fill: 
-//   }
-//   100% {
-//     fill: initial;
-//   }
 }

@@ -5,6 +5,7 @@ import { AppModule } from './app.module';
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AppShellComponent } from './app-shell/app-shell.component';
+import { TreeComponent } from './tree/tree.component';
 
 const routes: Routes = [ { path: 'shell', component: AppShellComponent }];
 
@@ -15,6 +16,6 @@ const routes: Routes = [ { path: 'shell', component: AppShellComponent }];
     RouterModule.forRoot(routes),
   ],
   bootstrap: [AppComponent],
-  declarations: [AppShellComponent],
+  declarations: [AppShellComponent, TreeComponent],
 })
 export class AppServerModule {}

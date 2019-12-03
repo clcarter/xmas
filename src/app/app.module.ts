@@ -15,11 +15,15 @@ import { environment } from '../environments/environment';
 // import { AngularFireAuthModule } from '@angular/fire/auth';
 import { RouterModule } from '@angular/router';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { TreeComponent } from './tree/tree.component';
+import { SnowService } from './snow.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    TreeComponent,
+    SnowService
   ],
   imports: [
     BrowserAnimationsModule,

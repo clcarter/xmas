@@ -58,6 +58,13 @@
               "Jessica": "Chris & Eliza",
               "Nate & Amanda": "Jessica",
               "Stacie & Logan": "Nate & Amanda"
+          },
+          "y2019": {
+              "Chantel & Jake": "Nate & Amanda",
+              "Chris & Eliza": "Jessica & Jake",
+              "Jessica & Jake": "Stacie & Logan",
+              "Nate & Amanda": "Chantel & Jake",
+              "Stacie & Logan": "Chris & Eliza"
           }
       },
       "randomized": true

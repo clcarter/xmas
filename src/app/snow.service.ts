@@ -7,7 +7,7 @@ import { Snow } from './models/snow';
 export class SnowService {
 
   constructor() {
-
+    console.log('in snow service');
     const snow: Snow = {
       baseSize: [40, 40],
       maxFlakeStems: 6,

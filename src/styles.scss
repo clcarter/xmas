@@ -17,11 +17,25 @@ $custom-typography: mat-typography-config(
 
 @include mat-toolbar-typography($custom-typography);
 
+html {
+  background-color: rgb(255,255,255);
+}
+
 body {
+  &::before {
+    content: 'Fröliche Weinachten';
+    position: absolute;
+    top: -30px;
+    text-align: center;
+    width: 100%;
+    left: 0; right: 0;
+  }
   margin: 0;
-  background-color: rgb(19,27,61);
+  background-color: rgb(255,255,255);
   background: radial-gradient(ellipse at center, rgba(19,27,61,.8) 0%, rgba(19,27,61,1) 60%, rgba(19,27,61,1) 80%, rgba(10,20,31,1) 100%);
   transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+  width: 100%;
+  height: 100vh;
 }
 
 xmas-root {

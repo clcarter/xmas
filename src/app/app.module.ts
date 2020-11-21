@@ -23,7 +23,6 @@ import { SnowService } from './snow.service';
     AppComponent,
     HomeComponent,
     TreeComponent,
-    SnowService
   ],
   imports: [
     BrowserAnimationsModule,
@@ -38,7 +37,7 @@ import { SnowService } from './snow.service';
     FlexLayoutModule
     // AngularFireModule.initializeApp(environment.firebase),
   ],
-  providers: [GiftService],
+  providers: [GiftService, SnowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

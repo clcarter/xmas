@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SnowService } from './snow.service';
 
 
 @Component({
@@ -8,7 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  constructor(private snow: SnowService) {
+
+  }
+
   ngOnInit(): void {
-    
   }
 }

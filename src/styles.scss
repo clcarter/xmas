@@ -1,33 +1,48 @@
 @import '~@angular/material/theming';
-@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import './theme.scss';
+@import 'theme';
 
 @include mat-core();
 
-$xmas-theme: mat-light-theme($xmas-red, $xmas-green, $xmas-gold);
+$xmas-theme: mat-dark-theme($xmas-red, $xmas-green, $xmas-gold);
 
 @include angular-material-theme($xmas-theme);
+html {
+  background-color: rgba(19, 27, 61, 1);
+}
 
-$custom-typography: mat-typography-config(
-  $font-family: 'Fredericka the Great',
-  $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500)
-);
+body {
+  &::before {
+    content: "Fröliche Weinachten";
+    position: absolute;
+    top: -30px;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+}
 
-@include mat-toolbar-typography($custom-typography);
-
-body:after {
-
-  opacity: 0.2;
-  z-index: -1;
-  position: fixed;
-  top: 0;
+xmas-root {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
   width: 100%;
-  bottom: 0;
-  background: url('assets/svg/xmas-leaves-orn.svg') center center no-repeat;
-  background-size: contain;
-  content: '';
-  font-size: 100vw;
-  line-height: 100vh;
+  height: 100vh;
+  height: -webkit-fill-available;
+  background-color: #fff;
+  user-select: none;
+  
+  svg {
+    transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+  }
+}
+
+a.alternative {
+  text-decoration: none;
+  color: inherit;
 }

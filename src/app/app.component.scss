@@ -1,0 +1,56 @@
+:host {
+  .background {
+    position: fixed;
+    margin: 0;
+    background: radial-gradient(ellipse at center, rgba(19, 27, 61, 0.8) 0%, #131b3d 60%, #131b3d 80%, #0a141f 100%);
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    justify-items: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 500px) {
+  :host {
+    .background {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+  }
+}
+h1.title {
+  font-size: 2rem;
+  font-style: italic;
+  font-family: 'rieven-uncial';
+  color: #fff;
+  position: fixed;
+  bottom: 54px;
+}
+footer {
+  position: fixed;
+  background: #fff;
+  display: flex;
+  bottom: 0;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 -4px 7px #d90000cc;
+
+  img {
+    max-width: 100%;
+    padding: 0 40px;
+    max-height: 100%;
+  }
+}
+main {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+}
+  

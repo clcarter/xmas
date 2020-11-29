@@ -2,16 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Xmas</title>
+  <title>Carter Family Gift Exchange</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#1976d2">
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon72x72.png">
+  <meta name="theme-color" content="#b90000">
+  <link rel="stylesheet" href="https://use.typekit.net/ajp7lho.css">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
   <xmas-root></xmas-root>
+  <script>
+    const original = document.getElementById('tree')
+    if (original?.firstElementChild) {
+      const arr = Array(34).fill(original.cloneNode(true))
+      Array.from(arr).forEach(el => {
+        let val = Math.floor(Math.random() * 100)
+        setInterval(() => {
+          val += 5
+          el.firstElementChild.style = `filter: hue-rotate(${val}deg)`
+        }, Math.floor(Math.random() * 600) + 100)
+        original.parentElement.insertBefore(el, original)
+      })
+
+    }
+    </script>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>

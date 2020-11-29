@@ -1,15 +1,14 @@
-import { HomeComponent } from './home/home.component';
-import { ToComponent } from './to/to.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'to/:to/from/:from', component: ToComponent}
+  {path: '2018', loadChildren: () => import('./2018/2018.module').then(m => m.Y2018Module), data: {titleFragment: ' | 2018'} },
+  { path: '2020', loadChildren: () => import('./2020/y2020.module').then(m => m.Y2020Module), data: {titleFragment: ' | 2020'} },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', preloadingStrategy: PreloadAllModules })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

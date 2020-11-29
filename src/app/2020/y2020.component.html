@@ -1,0 +1,8 @@
+<section>
+  <button [svgButton]="'ornaments:0' + (idx + 1)"
+     [@navigate]="gifter.leave"
+     *ngFor="let gifter of gifters$ | async; let idx = index" 
+     (click)="navigate(gifter)">
+    <span class="gifters">{{gifter.from}}</span>
+</button>
+</section>

@@ -10,7 +10,7 @@
       "prefix": "xmas",
       "schematics": {
         "@schematics/angular:component": {
-          "styleext": "scss"
+          "style": "scss"
         }
       },
       "architect": {
@@ -18,15 +18,14 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "aot": true,
-            "outputPath": "dist/xmas",
+            "outputPath": "dist/xmas/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.json",
               "src/manifest.webmanifest"
             ],
             "styles": [
@@ -46,7 +45,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -71,8 +69,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "xmas:build",
-            "optimization": true
+            "browserTarget": "xmas:build"
           },
           "configurations": {
             "production": {
@@ -91,7 +88,7 @@
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
+            "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
               "src/styles.scss"
@@ -101,6 +98,7 @@
               "src/favicon.ico",
               "src/assets",
               "src/manifest.json",
+              "src/manifest.webmanifest",
               "src/manifest.webmanifest"
             ]
           }
@@ -109,9 +107,10 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json",
-              "tsconfig.worker.json"
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "tsconfig.worker.json",
+              "tsconfig.server.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -121,12 +120,13 @@
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/xmas-server",
+            "outputPath": "dist/xmas/server",
             "main": "src/main.server.ts",
-            "tsConfig": "src/tsconfig.server.json"
+            "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
             "production": {
+              "outputHashing": "media",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -134,10 +134,7 @@
                 }
               ],
               "sourceMap": false,
-              "optimization": {
-                "scripts": false,
-                "styles": true
-              }
+              "optimization": true
             }
           }
         },
@@ -189,7 +186,9 @@
   "defaultProject": "xmas",
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "scss"
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "viewEncapsulation": "None"
     }
   }
 }

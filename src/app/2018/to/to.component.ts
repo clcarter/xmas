@@ -9,7 +9,7 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./to.component.scss']
 })
 export class ToComponent implements OnInit {
-  gifts: Observable<{to: string, from: string}>
+  gifts: Observable<{ to: string | null; from: string | null; }> | undefined
 
   constructor(private route: ActivatedRoute) { }
 

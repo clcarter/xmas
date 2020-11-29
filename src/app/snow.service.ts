@@ -18,11 +18,17 @@ export class SnowService {
       windowHeight: 1080,
       windowWidth: 2400
     }
-    const worker = new Worker('src/app/snow.worker.ts', {type: 'module'});
 
-    worker.postMessage(snow);
-    worker.addEventListener('message', ({data}) => {
-      console.log(data);
-    })
+    if (typeof Worker !== 'undefined') {
+      // Create a new
+      const worker = new Worker('./snow.worker', { type: 'module' });
+      worker.postMessage(snow);
+        worker.addEventListener('message', ({data}) => {
+          console.log(data);
+        })
+    } else {
+      // Web Workers are not supported in this environment.
+      // You should add a fallback so that your program still executes correctly.
+    }
   }
 }

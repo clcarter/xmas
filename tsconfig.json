@@ -1,25 +1,25 @@
 {
   "compileOnSave": false,
   "angularCompilerOptions": {
-    "fullTemplateTypeCheck": false,
-    "ivyTemplateTypeCheck": false,
-    "strictInjectionParameters": false
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
   },
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "target": "es2015",
+    "module": "es2020",
     "lib": [
       "es2018",
       "dom"

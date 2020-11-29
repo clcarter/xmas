@@ -1,0 +1,43 @@
+xmas-to {
+  img {
+    max-width: 100%;
+    padding: 0 40px;
+    max-height: 100px;
+  }
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: #d90000;
+  background: #fff;
+  width: 100vw;
+  height: 75vh;
+  margin-top: 25vh;
+  height: 75%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 -4px 7px #d90000cc;
+  font-family: 'rieven-uncial';
+  position: relative;
+  z-index: 1;
+  h1 {
+    font-size: 2rem;
+    margin-top: 50px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  nav {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  button.mat-icon-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

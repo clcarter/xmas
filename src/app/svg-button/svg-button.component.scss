@@ -1,0 +1,17 @@
+:host {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  
+  .mat-icon {
+    min-width: 200px;
+    min-height: 200px;
+  }
+}

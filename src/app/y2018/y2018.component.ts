@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+
 import { DisplayGifters, GiftService } from './../gift.service';
 
 
@@ -10,7 +11,7 @@ import { DisplayGifters, GiftService } from './../gift.service';
   styleUrls: ['./y2018.component.scss']
 })
 export class Y2018Component implements OnInit {
-  gifters: Observable<DisplayGifters[]>
+  gifters: Observable<DisplayGifters[]> | undefined
   bgs = [
     'url(assets/svg/charlie-brown.svg)',
     'url(assets/svg/pine-needles.svg)',
@@ -27,7 +28,7 @@ export class Y2018Component implements OnInit {
     this.gifters = this.gift.getGifters()
   }
 
-  route(giver) {
+  route(giver: DisplayGifters) {
     this.router.navigate(['to', giver.to, 'from', giver.from]);
   }
 }

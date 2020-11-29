@@ -1,129 +1,133 @@
 {
-  "carter": {
-      "couples": null,
-      "gifters": {
-        "Chantel & Jake": "Stacie & Logan",
-        "Chris & Eliza": "Chantel & Jake",
-        "Jessica": "Chris & Eliza",
-        "Nate & Amanda": "Jessica",
-        "Stacie & Logan": "Nate & Amanda"
-      },
-      "participating": {
-          "Chantel & Jake": "Chantel & Jake",
-          "Chris & Eliza": "Chris & Eliza",
-          "Jessica": "Jessica",
-          "Nate & Amanda": "Nate & Amanda",
-          "Stacie & Logan": "Stacie & Logan"
-      },
-      "previousExchanges": {
-          "y2013": {
-              "Amanda": "Chris",
-              "Chantel": "Nate",
-              "Chris": "Marshall",
-              "Eliza": "Amanda",
-              "Jessica": "Chantel",
-              "Marshall": "Eliza",
-              "Nate": "Jessica"
-          },
-          "y2014": {
-              "Chantel & Jake": "Nate & Amanda",
-              "Chris & Eliza": "Chantel & Jake",
-              "Jessica & Marshall": "Chris & Eliza",
-              "Nate & Amanda": "Jessica & Marshall"
-          },
-          "y2015": {
-              "Chantel & Jake": "Stacie",
-              "Chris & Eliza": "Jessica & Marshall",
-              "Jessica & Marshall": "Nate & Amanda",
-              "Nate & Amanda": "Chantel & Jake",
-              "Stacie": "Chris & Eliza"
-          },
-          "y2016": {
-              "Chantel & Jake": "Chris & Eliza",
-              "Chris & Eliza": "Nate & Amanda",
-              "Jessica": "Chantel & Jake",
-              "Nate & Amanda": "Stacie",
-              "Stacie": "Jessica"
-          },
-          "y2017": {
-              "Chantel & Jake": "Jessica",
-              "Chris & Eliza": "Stacie",
-              "Jessica": "Nate & Amanda",
-              "Nate & Amanda": "Chris & Eliza",
-              "Stacie": "Chantel & Jake"
-          },
-          "y2018": {
-              "Chantel & Jake": "Stacie & Logan",
-              "Chris & Eliza": "Chantel & Jake",
-              "Jessica": "Chris & Eliza",
-              "Nate & Amanda": "Jessica",
-              "Stacie & Logan": "Nate & Amanda"
-          },
-          "y2019": {
-              "Chantel & Jake": "Nate & Amanda",
-              "Chris & Eliza": "Jessica & Jake",
-              "Jessica & Jake": "Stacie & Logan",
-              "Nate & Amanda": "Chantel & Jake",
-              "Stacie & Logan": "Chris & Eliza"
-          }
-      },
-      "randomized": true
-  },
-  "wright": {
-      "couples": {
-          "Alan": "Angela",
-          "Aubrey": "Kendrick",
-          "Charity": "Jordan",
-          "Chris": "Eliza",
-          "Joe": "Aubrey",
-          "Kendrick": "Joe"
-      },
-      "gifters": {
-          "Alan": "Joe",
-          "Alana": "Aubrey",
-          "Angela": "Hyrum",
-          "Aubrey": "Kendrick",
-          "Bryna": "Eliza",
-          "Charity": "Bryna",
-          "Chris": "Alana",
-          "Eliza": "Alan",
-          "Emilie": "Chris",
-          "Hyrum": "Emilie",
-          "Joe": "Charity",
-          "Jordan": "Angela",
-          "Kendrick": "Jordan"
-      },
-      "participating": {
-          "Alan": "Alan",
-          "Alana": "Alana",
-          "Angela": "Angela",
-          "Aubrey": "Aubrey",
-          "Bryna": "Bryna",
-          "Charity": "Charity",
-          "Chris": "Chris",
-          "Eliza": "Eliza",
-          "Emilie": "Emilie",
-          "Hyrum": "Hyrum",
-          "Joe": "Joe",
-          "Jordan": "Jordan",
-          "Kendrick": "Kendrick"
-      },
-      "previousExchanges": {
-          "y2013": {
-              "Alan": "Aubrey",
-              "Alana": "Chris",
-              "Angela": "Joseph",
-              "Aubrey": "Hyrum",
-              "Charity": "Kendrick",
-              "Chris": "Alan",
-              "Eliza": "Jordan",
-              "Emilie": "Angela",
-              "Hyrum": "Charity",
-              "Jordan": "Alana",
-              "Joseph": "Eliza",
-              "Kendrick": "Emilie"
-          }
-      },
-      "randomized": true
-  }
+    "carter": {
+        "couples": null,
+        "gifters": {
+            "Nate & Amanda": "Stacie & Logan",
+            "Chris & Eliza": "Nate & Amanda",
+            "Jessica & Jake": "Chantel & Jake",
+            "Chantel & Jake": "Chris & Eliza",
+            "Stacie & Logan": "Jessica & Jake"
+        },
+        "participating": {
+            "Nate & Amanda": "Nate & Amanda",
+            "Chris & Eliza": "Chris & Eliza",
+            "Jessica & Jake": "Jessica & Jake",
+            "Chantel & Jake": "Chantel & Jake",
+            "Stacie & Logan": "Stacie & Logan"
+        },
+        "previousExchanges": {
+            "y2013": {
+                "Amanda": "Chris",
+                "Chantel": "Nate",
+                "Chris": "Marshall",
+                "Eliza": "Amanda",
+                "Jessica": "Chantel",
+                "Marshall": "Eliza",
+                "Nate": "Jessica"
+            },
+            "y2014": {
+                "Chantel & Jake": "Nate & Amanda",
+                "Chris & Eliza": "Chantel & Jake",
+                "Jessica & Marshall": "Chris & Eliza",
+                "Nate & Amanda": "Jessica & Marshall"
+            },
+            "y2015": {
+                "Chantel & Jake": "Stacie",
+                "Chris & Eliza": "Jessica & Marshall",
+                "Jessica & Marshall": "Nate & Amanda",
+                "Nate & Amanda": "Chantel & Jake",
+                "Stacie": "Chris & Eliza"
+            },
+            "y2016": {
+                "Chantel & Jake": "Chris & Eliza",
+                "Chris & Eliza": "Nate & Amanda",
+                "Jessica": "Chantel & Jake",
+                "Nate & Amanda": "Stacie",
+                "Stacie": "Jessica"
+            },
+            "y2017": {
+                "Chantel & Jake": "Jessica",
+                "Chris & Eliza": "Stacie",
+                "Jessica": "Nate & Amanda",
+                "Nate & Amanda": "Chris & Eliza",
+                "Stacie": "Chantel & Jake"
+            },
+            "y2018": {
+                "Chantel & Jake": "Stacie & Logan",
+                "Chris & Eliza": "Chantel & Jake",
+                "Jessica": "Chris & Eliza",
+                "Nate & Amanda": "Jessica",
+                "Stacie & Logan": "Nate & Amanda"
+            },
+            "y2019": {
+                "Chantel & Jake": "Nate & Amanda",
+                "Chris & Eliza": "Jessica & Jake",
+                "Jessica & Jake": "Stacie & Logan",
+                "Nate & Amanda": "Chantel & Jake",
+                "Stacie & Logan": "Chris & Eliza"
+            },
+            "y2020": {
+                "Chantel & Jake": "Chris & Eliza",
+                "Chris & Eliza": "Nate & Amanda",
+                "Jessica & Jake": "Chantel & Jake",
+                "Nate & Amanda": "Stacie & Logan",
+                "Stacie & Logan": "Jessica & Jake"
+            }
+        },
+        "randomized": true
+    },
+    "wright": {
+        "couples": {
+            "Alan & Angela": "Alan & Angela",
+            "Alana & Eric": "Alana & Eric",
+            "Joe & Aubrey": "Joe & Aubrey",
+            "Bryna": "Bryna",
+            "Charity & Jordan": "Charity & Jordan",
+            "Chris & Eliza": "Chris & Eliza",
+            "Emilie": "Emilie",
+            "Hyrum & Chelsea": "Hyrum & Chelsea"
+        },
+        "gifters": {
+            "Alan": "Joe",
+            "Alana": "Aubrey",
+            "Angela": "Hyrum",
+            "Aubrey": "Kendrick",
+            "Bryna": "Eliza",
+            "Charity": "Bryna",
+            "Chris": "Alana",
+            "Eliza": "Alan",
+            "Emilie": "Chris",
+            "Hyrum": "Emilie",
+            "Joe": "Charity",
+            "Jordan": "Angela",
+            "Kendrick": "Jordan"
+        },
+        "participating": {
+            "Alan & Angela": "Alan & Angela",
+            "Alana & Eric": "Alana & Eric",
+            "Joe & Aubrey": "Joe & Aubrey",
+            "Bryna": "Bryna",
+            "Charity & Jordan": "Charity & Jordan",
+            "Chris & Eliza": "Chris & Eliza",
+            "Emilie": "Emilie",
+            "Hyrum & Chelsea": "Hyrum & Chelsea"
+        },
+        "previousExchanges": {
+            "y2013": {
+                "Alan": "Aubrey",
+                "Alana": "Chris",
+                "Angela": "Joseph",
+                "Aubrey": "Hyrum",
+                "Charity": "Kendrick",
+                "Chris": "Alan",
+                "Eliza": "Jordan",
+                "Emilie": "Angela",
+                "Hyrum": "Charity",
+                "Jordan": "Alana",
+                "Joseph": "Eliza",
+                "Kendrick": "Emilie"
+            }
+        },
+        "randomized": true
+    }
 }

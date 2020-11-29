@@ -18,20 +18,28 @@
                /assets/images/m-xmas@0.75x.jpg 0.75x,
                /assets/images/m-xmas.jpg 1x" class="ng-tns-c30-0"></footer></xmas-root>
   <script>
-    const original = document.getElementById('tree')
-    if (original?.firstElementChild) {
-      const arr = Array(34).fill(original.cloneNode(true))
-      Array.from(arr).forEach(el => {
-        let val = Math.floor(Math.random() * 100)
-        setInterval(() => {
-          val += 5
-          el.firstElementChild.style = `filter: hue-rotate(${val}deg)`
-        }, Math.floor(Math.random() * 600) + 100)
-        original.parentElement.insertBefore(el, original)
-      })
-
-    }
-    </script>
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+      
+      const original = document.getElementById('tree')
+      if (original?.firstElementChild) {
+        const arr = Array(34).fill(original.cloneNode(true))
+        Array.from(arr).forEach(el => {
+          let val = Math.floor(Math.random() * 100)
+          setInterval(() => {
+            val += 5
+            el.firstElementChild.style = `filter: hue-rotate(${val}deg)`
+          }, Math.floor(Math.random() * 600) + 100)
+          original.parentElement.insertBefore(el, original)
+        })
+        
+      }
+    })();
+  </script>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 <script src="runtime-es2015.af2576f425a64da4e7c8.js" type="module"></script><script src="runtime-es5.af2576f425a64da4e7c8.js" nomodule="" defer=""></script><script src="polyfills-es5.a6dd6c27a967307da082.js" nomodule="" defer=""></script><script src="polyfills-es2015.9322c6eaf4d7da167ed9.js" type="module"></script><script src="main-es2015.ea60d88c520f1ff8152b.js" type="module"></script><script src="main-es5.ea60d88c520f1ff8152b.js" nomodule="" defer=""></script>
 

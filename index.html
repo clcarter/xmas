@@ -1,17 +1,38 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="utf-8">
-  <title>Xmas</title>
+  <title>Carter Family Gift Exchange</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#1976d2">
-<link rel="stylesheet" href="styles.1477882620eaae8a1ced.css"></head>
+  <link rel="icon" type="image/x-icon" href="/assets/icons/favicon72x72.png">
+  <meta name="theme-color" content="#b90000">
+  <link rel="stylesheet" href="https://use.typekit.net/ajp7lho.css">
+  <link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="styles.87aa95d26d3e545d45af.css"><style ng-transition="serverApp">[_nghost-sc30]   .background[_ngcontent-sc30]{position:fixed;margin:0;background:radial-gradient(ellipse at center,rgba(19,27,61,.8) 0,#131b3d 60%,#131b3d 80%,#0a141f 100%);transition:all 1s cubic-bezier(.175,.885,.32,1.275);width:100%;height:100vh;display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));justify-items:center;align-items:center}@media screen and (min-width:500px){[_nghost-sc30]   .background[_ngcontent-sc30]{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}}h1.title[_ngcontent-sc30]{font-size:2rem;font-style:italic;font-family:rieven-uncial;color:#fff;position:fixed;bottom:54px}footer[_ngcontent-sc30]{position:fixed;background:#fff;display:flex;bottom:0;width:100vw;justify-content:center;align-items:center;height:100px;border-top-left-radius:10px;border-top-right-radius:10px;box-shadow:0 -4px 7px rgba(217,0,0,.8)}footer[_ngcontent-sc30]   img[_ngcontent-sc30]{max-width:100%;padding:0 40px;max-height:100%}main[_ngcontent-sc30]{position:fixed;top:0;height:100vh;z-index:1}</style><style ng-transition="serverApp"></style></head>
 <body>
-  <xmas-root></xmas-root>
+  <xmas-root _nghost-sc30="" class="ng-tns-c30-0" ng-version="11.0.2"><div _ngcontent-sc30="" class="background ng-tns-c30-0"><xmas-tree _ngcontent-sc30="" id="tree" _nghost-sc29="" class="ng-tns-c30-0 ng-star-inserted"><img _ngcontent-sc29="" src="/assets/images/tree@2x.png" srcset="/assets/images/tree@2x.png 2x,
+               /assets/images/tree.png 1x,
+               /assets/images/tree@1.5x.png 1.5x,
+               /assets/images/tree@3x.png 3x"></xmas-tree><!----><!----></div><!----><footer _ngcontent-sc30="" class="ng-tns-c30-0"><img _ngcontent-sc30="" alt="Merry Christmas" src="/assets/images/m-xmas@0.25x.jpg" srcset="/assets/images/m-xmas@0.25x.jpg 0.25x,
+               /assets/images/m-xmas@0.5x.jpg 0.5x,
+               /assets/images/m-xmas@0.75x.jpg 0.75x,
+               /assets/images/m-xmas.jpg 1x" class="ng-tns-c30-0"></footer></xmas-root>
+  <script>
+    const original = document.getElementById('tree')
+    if (original?.firstElementChild) {
+      const arr = Array(34).fill(original.cloneNode(true))
+      Array.from(arr).forEach(el => {
+        let val = Math.floor(Math.random() * 100)
+        setInterval(() => {
+          val += 5
+          el.firstElementChild.style = `filter: hue-rotate(${val}deg)`
+        }, Math.floor(Math.random() * 600) + 100)
+        original.parentElement.insertBefore(el, original)
+      })
+
+    }
+    </script>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
-<script type="text/javascript" src="runtime.ec2944dd8b20ec099bf3.js"></script><script type="text/javascript" src="polyfills.ff5d7c34b4505e332743.js"></script><script type="text/javascript" src="main.f2332c8f973496154fb4.js"></script></body>
-</html>
+<script src="runtime-es2015.af2576f425a64da4e7c8.js" type="module"></script><script src="runtime-es5.af2576f425a64da4e7c8.js" nomodule="" defer=""></script><script src="polyfills-es5.a6dd6c27a967307da082.js" nomodule="" defer=""></script><script src="polyfills-es2015.9322c6eaf4d7da167ed9.js" type="module"></script><script src="main-es2015.ea60d88c520f1ff8152b.js" type="module"></script><script src="main-es5.ea60d88c520f1ff8152b.js" nomodule="" defer=""></script>
+
+</body></html>

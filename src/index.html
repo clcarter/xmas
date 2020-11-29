@@ -14,20 +14,28 @@
 <body>
   <xmas-root></xmas-root>
   <script>
-    const original = document.getElementById('tree')
-    if (original?.firstElementChild) {
-      const arr = Array(34).fill(original.cloneNode(true))
-      Array.from(arr).forEach(el => {
-        let val = Math.floor(Math.random() * 100)
-        setInterval(() => {
-          val += 5
-          el.firstElementChild.style = `filter: hue-rotate(${val}deg)`
-        }, Math.floor(Math.random() * 600) + 100)
-        original.parentElement.insertBefore(el, original)
-      })
-
-    }
-    </script>
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+      
+      const original = document.getElementById('tree')
+      if (original?.firstElementChild) {
+        const arr = Array(34).fill(original.cloneNode(true))
+        Array.from(arr).forEach(el => {
+          let val = Math.floor(Math.random() * 100)
+          setInterval(() => {
+            val += 5
+            el.firstElementChild.style = `filter: hue-rotate(${val}deg)`
+          }, Math.floor(Math.random() * 600) + 100)
+          original.parentElement.insertBefore(el, original)
+        })
+        
+      }
+    })();
+  </script>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>
 </html>

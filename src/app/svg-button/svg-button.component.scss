@@ -9,7 +9,9 @@
   position: relative;
   text-decoration: none;
   outline: none;
-  
+  &:last-of-type {
+    margin-bottom: 100px;
+  }
   .mat-icon {
     min-width: 200px;
     min-height: 200px;

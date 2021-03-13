@@ -10,12 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TreeComponent } from './tree/tree.component';
 import { IconRegistry } from './ui/icon.service';
+import { TitleDirective } from './title.directive';
 
 const iconRegistrar = (iconService: IconRegistry) => () => iconService.register()
 @NgModule({
   declarations: [
     AppComponent,
     TreeComponent,
+    TitleDirective,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

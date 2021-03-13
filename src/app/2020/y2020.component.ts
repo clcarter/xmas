@@ -13,7 +13,7 @@ import { DisplayGifters, GiftService } from '../gift.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('navigate', [transition('* <=> *', useAnimation(tada))]),
-    ]
+  ]
 })
 export class Y2020Component implements OnInit {
   gifters$: Observable<DisplayGifters[]> | undefined
@@ -25,6 +25,6 @@ export class Y2020Component implements OnInit {
 
   navigate(gifter: DisplayGifters ): void {
     gifter.leave = true;
-    timer(700).subscribe(() => this.router.navigate(['2020', 'from', gifter.from], {state: gifter}))
+    timer(700).subscribe(() => this.router.navigate(['/', '2020', {outlets: {gifter: ['from', gifter.from]}}], {state: gifter}))
   }
 }

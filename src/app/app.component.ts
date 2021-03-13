@@ -17,6 +17,10 @@ import type { OnInit } from '@angular/core';
     trigger('routeAnimations', [
       transition('* => ToPage', useAnimation(slideInDown)),
       transition('ToPage => *', useAnimation(slideOutDown)),
+      transition('* <=> *', useAnimation(zoomIn))]),
+    trigger('gifterAnimate', [
+      transition('* => ToPage', useAnimation(slideInDown)),
+      transition('ToPage => *', useAnimation(slideOutDown)),
       transition('* <=> *', useAnimation(zoomIn))])
   ]
 })
@@ -29,8 +33,7 @@ export class AppComponent implements OnInit {
     timer(2000).subscribe(() => this.router.navigate(['2020']));
   }
 
-  prepareRoute(outlet: RouterOutlet) {
-    this.title.setTitle(`Carter Christmas Exchange${outlet?.activatedRouteData?.titleFragment ?? ''}`)
+  animate(outlet: RouterOutlet) {
     return outlet?.activatedRouteData?.animation;
   }
 }

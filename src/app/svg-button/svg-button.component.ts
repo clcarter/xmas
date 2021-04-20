@@ -1,6 +1,4 @@
-import { transition, trigger, useAnimation } from '@angular/animations';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { tada } from 'ng-animate';
 
 @Component({
   // tslint:disable-next-line: component-selector

@@ -4,8 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { slideOutUp } from 'ng-animate';
 import { Observable, timer } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { DisplayGifters } from 'src/app/gift.service';
-import { WindowRef } from 'src/app/window.service';
+import { DisplayGifters } from './../../gift.service';
+import { WindowRef } from './../../window.service';
 
 @Component({
   selector: 'xmas-to',
@@ -46,7 +46,7 @@ export class ToComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.gifter$ = this.activatedRoute.paramMap.pipe(map(() => this.windowRef.nativeWindow.history.state))
+    this.gifter$ = this.activatedRoute.paramMap.pipe(map(() => this.windowRef.nativeWindow?.history.state))
   }
 
   close() {

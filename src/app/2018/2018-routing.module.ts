@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { Y2018Component } from '../y2018/y2018.component';
+
 import { ToComponent } from './to/to.component';
+import { Y2018Component } from './y2018.component';
 
 
 const routes: Routes = [

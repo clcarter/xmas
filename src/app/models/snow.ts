@@ -1,5 +1,3 @@
-import { StringMap } from '@angular/compiler/src/compiler_facade_interface';
-
 export type start = number;
 export type end = number;
 export type Range = [start, end];

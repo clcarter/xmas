@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'button[svgButton], a[svgButton]',
   template: `
     <mat-icon [svgIcon]="svg"></mat-icon>
@@ -17,7 +17,6 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   // }
 })
 export class SvgButtonComponent {
-  // tslint:disable-next-line: no-input-rename
-  @Input('svgButton') svg = '';
-
+  // eslint-disable-next-line @angular-eslint/no-input-rename
+  @Input('svgButton') svg = ''
 }

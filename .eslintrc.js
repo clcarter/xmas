@@ -18,8 +18,7 @@ module.exports = {
         "node": true
     },
     "extends": [
-        "prettier",
-        "prettier/@typescript-eslint"
+        "prettier"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {

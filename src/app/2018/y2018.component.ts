@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
+import { Observable } from 'rxjs'
 
-import { DisplayGifters, GiftService } from './../gift.service';
-
+import { DisplayGifters, GiftService } from './../gift.service'
 
 @Component({
   selector: 'xmas-y2018',
   templateUrl: './y2018.component.html',
-  styleUrls: ['./y2018.component.scss']
+  styleUrls: ['./y2018.component.scss'],
 })
 export class Y2018Component implements OnInit {
   gifters: Observable<DisplayGifters[]> | undefined
@@ -19,7 +18,7 @@ export class Y2018Component implements OnInit {
     'url(assets/svg/candy-stripe.svg)',
     'url(assets/svg/snowflake.svg)',
     'url(assets/svg/tree-blk.svg)',
-    'url(assets/svg/paper.svg)'
+    'url(assets/svg/paper.svg)',
   ]
 
   constructor(private gift: GiftService, private router: Router) {}
@@ -29,6 +28,6 @@ export class Y2018Component implements OnInit {
   }
 
   route(giver: DisplayGifters) {
-    this.router.navigate(['to', giver.to, 'from', giver.from]);
+    this.router.navigate(['to', giver.to, 'from', giver.from])
   }
 }

@@ -81,7 +81,6 @@
   },
   "resolutions": {
     "webpack": "^5.0.0",
-    "html-webpack-plugin": "^5.0.0",
-    "javascrit"
+    "html-webpack-plugin": "^5.0.0"
   }
 }

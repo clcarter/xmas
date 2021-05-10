@@ -15,9 +15,9 @@ export class ToComponent implements OnInit {
 
   ngOnInit() {
     this.gifts = this.route.paramMap.pipe(
-      switchMap((params) => {
-        return of({ to: params.get('to'), from: params.get('from') })
-      })
+      switchMap((params) =>
+        of({ to: params.get('to'), from: params.get('from') })
+      )
     )
   }
 }

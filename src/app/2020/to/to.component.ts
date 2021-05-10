@@ -42,6 +42,7 @@ import { WindowRef } from './../../window.service'
   animations: [
     trigger('animate', [transition(':leave', useAnimation(slideOutUp))]),
   ],
+  // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
     '[@animate]': 'closeAnimation',
   },

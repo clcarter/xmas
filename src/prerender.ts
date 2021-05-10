@@ -32,8 +32,8 @@ global.HTMLDocument = win.HTMLDocument
 
 import { AppServerModule } from './app/app.server.module'
 
-const renderProcesses: Array<Promise<any>> = routes.map((url, i) => {
-  return renderModule(AppServerModule, { url, document })
+const renderProcesses: Array<Promise<any>> = routes.map((url, i) =>
+  renderModule(AppServerModule, { url, document })
     .then((html: string) =>
       writeFileSync(outs[i], `<!-- route: ${url} -->\n${html}`, {
         encoding: 'utf8',
@@ -43,6 +43,6 @@ const renderProcesses: Array<Promise<any>> = routes.map((url, i) => {
       console.error(err)
       process.exit(1)
     })
-})
+)
 
 Promise.all(renderProcesses).then(() => process.exit())

@@ -1,6 +1,6 @@
 /// <reference lib="webworker" />
 
-import { Snow } from 'src/app/models/snow'
+import { Snow } from './models/snow'
 
 interface SnowEvent extends MessageEvent {
   data: Snow
@@ -8,13 +8,10 @@ interface SnowEvent extends MessageEvent {
 
 const flakes = []
 
-const determineStems = ({ maxFlakeStems, minFlakeStems }: Partial<Snow>) => {
-  return Math.round(Math.random() * maxFlakeStems)
-}
+const determineStems = ({ maxFlakeStems, minFlakeStems }: Partial<Snow>) =>
+  Math.round(Math.random() * (maxFlakeStems ?? 0))
 
-const generateFlake = (config) => {
-  return []
-}
+const generateFlake = (_config) => []
 
 addEventListener('message', ({ data }: SnowEvent) => {
   console.log('in worker')

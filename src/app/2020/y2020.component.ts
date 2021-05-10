@@ -17,7 +17,7 @@ import { DisplayGifters, GiftService } from '../gift.service'
 })
 export class Y2020Component implements OnInit {
   gifters$: Observable<DisplayGifters[]> | undefined
-  constructor(private giftService: GiftService, private router: Router) {}
+  constructor(private giftService: GiftService, private router: Router) { }
 
   ngOnInit(): void {
     this.gifters$ = this.giftService.gifters$

@@ -28,7 +28,7 @@ export interface Family {
   couples: Couples
   gifters: Couples
   participating: Couples
-  previousExchanges: object
+  previousExchanges: Record<string, unknown>
   randomized: boolean
 }
 
@@ -50,7 +50,7 @@ export class GiftService {
   }
 
   getGifters(): Observable<DisplayGifters[]> {
-    return this.http.get<Gifters>(`assets/family.json`).pipe(
+    return this.http.get<Gifters>('assets/family.json').pipe(
       map((data: Gifters) => this.createArray(data.carter.gifters)),
       shareReplay()
     )

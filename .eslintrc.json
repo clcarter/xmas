@@ -21,6 +21,23 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": "xmas",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "prefix": "xmas",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/no-host-metadata-property": [
+          "warn"
+        ],
         "@typescript-eslint/consistent-type-definitions": "error",
         "@typescript-eslint/dot-notation": "off",
         "@typescript-eslint/explicit-member-accessibility": [

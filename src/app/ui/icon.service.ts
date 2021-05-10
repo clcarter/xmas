@@ -58,7 +58,7 @@ export class IconRegistry {
   constructor(
     private registry: MatIconRegistry,
     private sanitize: DomSanitizer,
-    @Inject(PLATFORM_ID) platformId: Object,
+    @Inject(PLATFORM_ID) platformId: Record<string, unknown>,
     @Inject(APP_ID) appId: string
   ) {
     this.platformBrowser = isPlatformBrowser(platformId)

@@ -1,18 +1,23 @@
-export type start = number
-export type end = number
-export type Range = [start, end]
+export type Start = number
+export type End = number
+export type Range = [Start, End]
 
-export type x = number
-export type y = number
-export type Area = [x, y]
+export type X = number
+export type Y = number
+export type Area = [X, Y]
 
-export namespace Color {
-  type red = number // 0 - 255
-  type green = number // 0 - 255
-  type blue = number // 0 - 255
-  type opacity = number // 0 - 1
-  export type RGBA = [red, green, blue, opacity?]
-  export type Hex = string
+type Hexibit = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | 'a' | 'b' | 'c' | 'd' | 'e' | 'f'
+type Hexibyte = `${Hexibit}${Hexibit}`
+type HexColor = [Hexibyte, Hexibyte, Hexibyte, Hexibyte?]
+
+// eslint-disable-next-line @typescript-eslint/prefer-namespace-keyword, @typescript-eslint/no-namespace
+export module Color {
+  type Red = number // 0 - 255
+  type Green = number // 0 - 255
+  type Blue = number // 0 - 255
+  type Opacity = number // 0 - 1
+  export type RGBA = [Red, Green, Blue, Opacity?]
+  export type Hex = HexColor
 }
 
 class Color {
@@ -22,20 +27,20 @@ class Color {
     try {
       Color.assertHex(color)
       this.rgb = [
-        parseInt(color.slice(1, 3) as string, 16),
-        parseInt(color.slice(3, 5) as string, 16),
-        parseInt(color.slice(5, 7) as string, 16),
+        parseInt(color[0] as string, 16),
+        parseInt(color[1] as string, 16),
+        parseInt(color[2] as string, 16),
       ]
       this.hex = color as Color.Hex
     } catch {
       Color.assertRGB(color)
       this.rgb = color as Color.RGBA
-      const toHex = (i: number) => i.toString(16).padStart(2, '0')
+      const toHex = (i: number) => i.toString(16).padStart(2, '0') as unknown as Hexibyte
+      const alphaChannel: [Hexibyte?] = color[3]
+      ? [toHex(this.rgb[3] ?? 0)]
+      : []
       this.hex =
-        `#${toHex(this.rgb[0])}${toHex(this.rgb[1])}${toHex(this.rgb[2])}` +
-        color[3]
-          ? toHex(this.rgb[3])
-          : ''
+        [toHex(this.rgb[0]), toHex(this.rgb[1]), toHex(this.rgb[2]), ...alphaChannel]
     }
   }
   static hex(color: Color.Hex): Color {
@@ -61,16 +66,16 @@ class Color {
     )
   }
 
+  static rgba(...rgb: Color.RGBA): Color {
+    Color.assertRGB(rgb)
+    return new Color(rgb)
+  }
+
   private static assert(condition: any, msg?: string): void {
     // asserts condition {
     if (!condition) {
       throw new Error(msg || 'Bad Color Value)')
     }
-  }
-
-  static rgba(...rgb: Color.RGBA): Color {
-    Color.assertRGB(rgb)
-    return new Color(rgb)
   }
 }
 

@@ -8,11 +8,6 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "xmas",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -168,11 +163,10 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "e2e/**/*.ts"
             ]
           }
         }
@@ -182,9 +176,13 @@
   "defaultProject": "xmas",
   "schematics": {
     "@schematics/angular:component": {
+      "prefix": "xmas",
       "style": "scss",
       "changeDetection": "OnPush",
       "viewEncapsulation": "None"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "xmas"
     }
   }
 }

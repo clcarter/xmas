@@ -2,6 +2,10 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "cli": {
+    "packageManager": "pnpm",
+    "analytics": false
+  },
   "projects": {
     "xmas": {
       "root": "",
@@ -141,33 +145,6 @@
               "browserTarget": "xmas:build:production",
               "serverTarget": "xmas:server:production"
             }
-          }
-        }
-      }
-    },
-    "xmas-e2e": {
-      "root": "e2e/",
-      "projectType": "application",
-      "prefix": "",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "xmas:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "xmas:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": [
-              "e2e/**/*.ts"
-            ]
           }
         }
       }

@@ -9,6 +9,8 @@
 # dependencies
 /node_modules
 
+*.pem
+
 # IDEs and editors
 /.idea
 .project
@@ -26,6 +28,7 @@
 !.vscode/extensions.json
 
 # misc
+/.angular/cache
 /.sass-cache
 /connect.lock
 /coverage

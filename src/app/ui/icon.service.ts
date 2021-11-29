@@ -1,7 +1,7 @@
-import { isPlatformBrowser } from '@angular/common';
-import { APP_ID, Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+import { isPlatformBrowser } from '@angular/common'
+import { APP_ID, Inject, Injectable, PLATFORM_ID } from '@angular/core'
+import { MatIconRegistry } from '@angular/material/icon'
+import { DomSanitizer } from '@angular/platform-browser'
 
 const icons = {
   pattern: [
@@ -50,7 +50,7 @@ const icons = {
     { iconName: 'geo-xmas', url: 'assets/svg/geo-xmas.svg' },
     { iconName: 'xmas-leaves-orn', url: 'assets/svg/xmas-leaves-orn.svg' },
   ],
-};
+}
 
 @Injectable({ providedIn: 'root' })
 export class IconRegistry {
@@ -58,18 +58,23 @@ export class IconRegistry {
   constructor(
     private registry: MatIconRegistry,
     private sanitize: DomSanitizer,
-    @Inject(PLATFORM_ID) platformId: Object,
-    @Inject(APP_ID) appId: string) {
+    @Inject(PLATFORM_ID) platformId: Record<string, unknown>,
+    @Inject(APP_ID) appId: string
+  ) {
     this.platformBrowser = isPlatformBrowser(platformId)
   }
 
   register() {
     // if (this.platformBrowser) {
-      Object.entries(icons).forEach(([namespace, iconConfig]) => {
-        iconConfig.forEach(({ iconName, url }) => {
-          this.registry.addSvgIconInNamespace(namespace, iconName, this.sanitize.bypassSecurityTrustResourceUrl(url))
-        })
+    Object.entries(icons).forEach(([namespace, iconConfig]) => {
+      iconConfig.forEach(({ iconName, url }) => {
+        this.registry.addSvgIconInNamespace(
+          namespace,
+          iconName,
+          this.sanitize.bypassSecurityTrustResourceUrl(url)
+        )
       })
+    })
     // }
   }
 }

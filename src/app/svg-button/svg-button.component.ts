@@ -1,9 +1,7 @@
-import { transition, trigger, useAnimation } from '@angular/animations';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { tada } from 'ng-animate';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
 
 @Component({
-  // tslint:disable-next-line: component-selector
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'button[svgButton], a[svgButton]',
   template: `
     <mat-icon [svgIcon]="svg"></mat-icon>
@@ -19,7 +17,6 @@ import { tada } from 'ng-animate';
   // }
 })
 export class SvgButtonComponent {
-  // tslint:disable-next-line: no-input-rename
-  @Input('svgButton') svg = '';
-
+  // eslint-disable-next-line @angular-eslint/no-input-rename
+  @Input('svgButton') svg = ''
 }

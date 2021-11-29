@@ -1,13 +1,12 @@
 import { transition, trigger, useAnimation } from '@angular/animations';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { slideInDown, slideOutDown, zoomIn } from 'ng-animate';
 import { timer } from 'rxjs';
 
 import { IconRegistry } from './ui/icon.service';
 
-import type { OnInit } from '@angular/core';
+import type { OnInit } from '@angular/core'
 @Component({
   selector: 'xmas-root',
   templateUrl: './app.component.html',
@@ -17,20 +16,39 @@ import type { OnInit } from '@angular/core';
     trigger('routeAnimations', [
       transition('* => ToPage', useAnimation(slideInDown)),
       transition('ToPage => *', useAnimation(slideOutDown)),
-      transition('* <=> *', useAnimation(zoomIn))])
-  ]
+      transition('* <=> *', useAnimation(zoomIn)),
+    ]),
+    trigger('gifterAnimate', [
+      transition('* => ToPage', useAnimation(slideInDown)),
+      transition('ToPage => *', useAnimation(slideOutDown)),
+      transition('* <=> *', useAnimation(zoomIn)),
+    ]),
+  ],
 })
 export class AppComponent implements OnInit {
-  trees = Array(35).fill(1);
-
-  constructor(private router: Router, private title: Title, public icons: IconRegistry) { }
+  @ViewChild('video', {read: ElementRef}) video!: ElementRef<HTMLVideoElement> 
+  constructor(
+    private router: Router,
+    public icons: IconRegistry,
+  ) {}
 
   ngOnInit(): void {
-    timer(2000).subscribe(() => this.router.navigate(['2020']));
+    timer(2000).subscribe(() => this.router.navigate(['2021']))
   }
 
-  prepareRoute(outlet: RouterOutlet) {
-    this.title.setTitle(`Carter Christmas Exchange${outlet?.activatedRouteData?.titleFragment ?? ''}`)
-    return outlet?.activatedRouteData?.animation;
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    this.play()
+  }
+  
+  play() {
+    this.video.nativeElement.muted = true
+    const played = this.video.nativeElement.play()
+    played.then().catch((err) => console.log('didn\'t start', err))
+  }
+
+  animate(outlet: RouterOutlet) {
+    return outlet?.activatedRouteData?.animation
   }
 }

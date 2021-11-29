@@ -2,17 +2,16 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  "cli": {
+    "packageManager": "pnpm",
+    "analytics": false
+  },
   "projects": {
     "xmas": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "xmas",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -22,7 +21,8 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "src/tsconfig.app.json",
+            "sourceMap": true,
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -33,7 +33,7 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "webWorkerTsConfig": "tsconfig.worker.json"
+            "webWorkerTsConfig": "src/tsconfig.worker.json"
           },
           "configurations": {
             "production": {
@@ -71,7 +71,11 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "xmas:build",
-            "host": "0.0.0.0"
+            "host": "0.0.0.0",
+            "watch": true,
+            "ssl": true,
+            "sslCert": "./localhost.pem",
+            "sslKey": "./localhost-key.pem"
           },
           "configurations": {
             "production": {
@@ -104,16 +108,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "tsconfig.worker.json",
-              "tsconfig.server.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         },
@@ -122,7 +121,7 @@
           "options": {
             "outputPath": "dist/xmas/server",
             "main": "src/main.server.ts",
-            "tsConfig": "tsconfig.server.json"
+            "tsConfig": "src/tsconfig.server.json"
           },
           "configurations": {
             "production": {
@@ -153,42 +152,18 @@
           }
         }
       }
-    },
-    "xmas-e2e": {
-      "root": "e2e/",
-      "projectType": "application",
-      "prefix": "",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "xmas:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "xmas:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
     }
   },
   "defaultProject": "xmas",
   "schematics": {
     "@schematics/angular:component": {
+      "prefix": "xmas",
       "style": "scss",
       "changeDetection": "OnPush",
       "viewEncapsulation": "None"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "xmas"
     }
   }
 }

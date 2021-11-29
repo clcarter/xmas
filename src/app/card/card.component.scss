@@ -1,0 +1,42 @@
+@import '../../theme';
+
+:host {
+  box-shadow: 3px 3px 9px #000;
+}
+
+.page {
+  font-family: 'caprizant';
+  box-shadow: 9px 9px 15px #000;
+}
+
+.page-text {
+  align-items: center;
+}
+
+.page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-cover-bottom {
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+  }
+  color: #fff;
+  h2 {
+    text-shadow: 3px 3px #000;
+    font-size: xxx-large;
+    text-align: center;
+  }
+}
+
+.card-background {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}

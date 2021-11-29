@@ -1,15 +1,13 @@
-import { Injectable } from '@angular/core';
-
-function _window(): typeof globalThis {
-  return window;
-}
+import { DOCUMENT } from '@angular/common'
+import { Inject, Injectable } from '@angular/core'
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WindowRef {
+  constructor(@Inject(DOCUMENT) private readonly document: Document) {}
 
-  get nativeWindow(): typeof globalThis {
-    return _window();
+  get nativeWindow(): (Window & typeof globalThis) | null {
+    return this.document.defaultView
   }
 }

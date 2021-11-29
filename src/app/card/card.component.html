@@ -1,0 +1,35 @@
+<div #page class="page page-cover page-cover-top" data-density="hard">
+  <div class="page-content">
+    <img [src]="'https://xmas.s3.us-west-2.amazonaws.com/' + gifter.fromInitials + '@0.25x.jpg'" [srcset]="
+        'https://xmas.s3.us-west-2.amazonaws.com/' + gifter.fromInitials + '@0.25x.jpg 480w,' +
+        'https://xmas.s3.us-west-2.amazonaws.com/' + gifter.fromInitials + '@0.5x.jpg 800w,' +
+        'https://xmas.s3.us-west-2.amazonaws.com/' + gifter.fromInitials + '@0.75x.jpg 1200w,' +
+        'https://xmas.s3.us-west-2.amazonaws.com/' + gifter.fromInitials + '.jpg'
+      " sizes="(max-width: 480px) 480px,
+                800px" [alt]="gifter.from" />
+  </div>
+</div>
+<div #page class="page">
+  <div class="page-content">
+    <img [src]="'https://xmas.s3.us-west-2.amazonaws.com/' + gifter.fromInitials + '-end@0.25x.jpg'" [srcset]="
+        'https://xmas.s3.us-west-2.amazonaws.com/' + gifter.fromInitials + '-end@0.25x.jpg 480w,' +
+        'https://xmas.s3.us-west-2.amazonaws.com/' + gifter.fromInitials + '-end@0.5x.jpg 800w,' +
+        'https://xmas.s3.us-west-2.amazonaws.com/' + gifter.fromInitials + '-end@0.75x.jpg 1200w,' +
+        'https://xmas.s3.us-west-2.amazonaws.com/' + gifter.fromInitials + '-end.jpg'
+      " sizes="(max-width: 480px) 480px,
+                800px" [alt]="gifter.from" />
+  </div>
+</div>
+<div #page class="page page-cover page-cover-bottom" data-density="hard">
+  <div class="page-content">
+    <img class="card-background" [src]="'https://xmas.s3.us-west-2.amazonaws.com/blank@0.25x.jpg'" [srcset]="
+        'https://xmas.s3.us-west-2.amazonaws.com/blank@0.25x.jpg 480w,' +
+        'https://xmas.s3.us-west-2.amazonaws.com/blank@0.5x.jpg 800w,' +
+        'https://xmas.s3.us-west-2.amazonaws.com/blank@0.75x.jpg 1200w,' +
+        'https://xmas.s3.us-west-2.amazonaws.com/blank.jpg'
+      " sizes="(max-width: 480px) 480px,
+                800px" [alt]="gifter.from" />
+    <div class="page-text">you have</div>
+    <h2>{{gifter.to}}</h2>
+  </div>
+</div>

@@ -36,6 +36,7 @@ const iconRegistrar = (iconService: IconRegistry) => () =>
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
+      registrationStrategy: "registerImmediately",
     }),
     RouterModule,
   ],

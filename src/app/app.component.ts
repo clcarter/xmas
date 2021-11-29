@@ -43,9 +43,11 @@ export class AppComponent implements OnInit {
   }
   
   play() {
-    this.video.nativeElement.muted = true
-    const played = this.video.nativeElement.play()
-    played.then().catch((err) => console.log('didn\'t start', err))
+    if(this.video) {
+      this.video.nativeElement.muted = true
+      const played = this.video.nativeElement.play()
+      played.then().catch((err) => console.log('didn\'t start', err))
+    }
   }
 
   animate(outlet: RouterOutlet) {

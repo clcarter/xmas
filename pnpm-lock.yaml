@@ -27,6 +27,7 @@ specifiers:
   '@types/jasmine': ^3.6.6
   '@types/jasminewd2': ^2.0.8
   '@types/node': ~14.14.34
+  '@types/page-flip': ^2.0.0
   '@typescript-eslint/eslint-plugin': 4.16.1
   '@typescript-eslint/eslint-plugin-tslint': ^4.17.0
   '@typescript-eslint/parser': 4.16.1
@@ -90,6 +91,7 @@ devDependencies:
   '@types/jasmine': 3.10.2
   '@types/jasminewd2': 2.0.10
   '@types/node': 14.14.45
+  '@types/page-flip': 2.0.0
   '@typescript-eslint/eslint-plugin': 4.16.1_25275e0f7df16bea8683afc2c4710d4e
   '@typescript-eslint/eslint-plugin-tslint': 4.33.0_eslint@8.3.0+typescript@4.4.4
   '@typescript-eslint/parser': 4.16.1_eslint@8.3.0+typescript@4.4.4
@@ -2186,6 +2188,10 @@ packages:
 
   /@types/node/14.14.45:
     resolution: {integrity: sha512-DssMqTV9UnnoxDWu959sDLZzfvqCF0qDNRjaWeYSui9xkFe61kKo4l1TWNTQONpuXEm+gLMRvdlzvNHBamzmEw==}
+    dev: true
+
+  /@types/page-flip/2.0.0:
+    resolution: {integrity: sha512-gGsLg9OytYjZFO2LH1HC1bdwtR4r1oUh6oPcGnbYxI+UJyNTLYTmd2FZNqF1bP0dRMz3gU4q5YHuvC5btK7etg==}
     dev: true
 
   /@types/parse-json/4.0.0:

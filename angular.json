@@ -22,6 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
+            "sourceMap": true,
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -71,7 +72,10 @@
           "options": {
             "browserTarget": "xmas:build",
             "host": "0.0.0.0",
-            "watch": true
+            "watch": true,
+            "ssl": true,
+            "sslCert": "./localhost.pem",
+            "sslKey": "./localhost-key.pem"
           },
           "configurations": {
             "production": {

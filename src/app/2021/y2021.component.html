@@ -1,0 +1,3 @@
+<section>
+  <xmas-card *ngFor="let gifter of gifters$ | async; let idx = index" [gifter]="gifter" [mobile]="!!(isHandset$ | async)" [ngClass]="{'mobile': isHandset$ | async}"></xmas-card>
+</section>

@@ -10,6 +10,13 @@ export type Carters =
   | 'Chantel & Jake'
   | 'Stacie & Logan'
 
+  export type CarterInitials =
+  | 'n-a'
+  | 'c-e'
+  | 'j-j'
+  | 'c-j'
+  | 's-l'
+
 export type Wright =
   | 'Alan & Angela'
   | 'Alana & Eric'
@@ -39,6 +46,7 @@ export interface Gifters {
 export interface DisplayGifters {
   from: string
   to: string
+  fromInitials: CarterInitials
   leave?: boolean
 }
 
@@ -51,14 +59,15 @@ export class GiftService {
 
   getGifters(): Observable<DisplayGifters[]> {
     return this.http.get<Gifters>('assets/family.json').pipe(
-      map((data: Gifters) => this.createArray(data.carter.gifters)),
-      shareReplay()
+      map(data => this.createArray(data.carter.gifters)),
+      shareReplay(1)
     )
   }
 
   private createArray(gifters: Couples): DisplayGifters[] {
     return Object.keys(gifters).map((from: string) => ({
       from,
+      fromInitials: from.split(' ').filter(it => it !== '&').map(it => it.substr(0, 1)).join('-').toLowerCase() as CarterInitials,
       to: gifters[from as any],
     }))
   }

@@ -6,7 +6,7 @@ export type X = number
 export type Y = number
 export type Area = [X, Y]
 
-type Hexibit = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | 'a' | 'b' | 'c' | 'd' | 'e' | 'f'
+type Hexibit = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '0' | 'a' | 'b' | 'c' | 'd' | 'e' | 'f'
 type Hexibyte = `${Hexibit}${Hexibit}`
 type HexColor = [Hexibyte, Hexibyte, Hexibyte, Hexibyte?]
 
@@ -81,11 +81,17 @@ class Color {
 
 export interface Snow {
   maxFlakes: number
-  baseSize: Area
+  baseSize: number
   zRange: Range
   windowWidth: number // if the worker can determine this, then don't pass it.
   windowHeight: number
   color: Color.RGBA | Color.Hex
-  maxFlakeStems: number //  use a value < 2 for a circle. The higher this value, the more rendering time required per flake
-  minFlakeStems: number //  use a value < 2 to allow simple circle flakes
+  maxFlakeXSections: number //  use a value < 2 for a circle. The higher this value, the more rendering time required per flake
+  minFlakeXSections: number //  use a value < 2 to allow simple circle flakes
+}
+
+export interface SnowFlake {
+  size: number
+  zAxis: number
+  xSections: number
 }

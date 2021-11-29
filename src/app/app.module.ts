@@ -11,9 +11,22 @@ import { AppComponent } from './app.component'
 import { TreeComponent } from './tree/tree.component'
 import { IconRegistry } from './ui/icon.service'
 import { TitleDirective } from './title.directive'
+import { SnowService } from './snow.service'
 
 const iconRegistrar = (iconService: IconRegistry) => () =>
   iconService.register()
+// const snowMaker = (snowService: SnowService) => () =>
+//   snowService.init({
+//     baseSize: 40,
+//     maxFlakeXSections: 6,
+//     minFlakeXSections: 2,
+//     maxFlakes: 500,
+//     color: [255, 255, 255],
+//     zRange: [-50, 30],
+//     windowHeight: 1080,
+//     windowWidth: 2400,
+//   })
+
 @NgModule({
   declarations: [AppComponent, TreeComponent, TitleDirective],
   imports: [
@@ -33,7 +46,13 @@ const iconRegistrar = (iconService: IconRegistry) => () =>
       deps: [IconRegistry],
       multi: true,
     },
+    // {
+    //   provide: APP_INITIALIZER,
+    //   useFactory: snowMaker,
+    //   deps: [SnowService],
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

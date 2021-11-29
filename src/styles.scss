@@ -2,13 +2,15 @@
 // @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import 'theme';
 
+@import url("https://use.typekit.net/ajp7lho.css");
+
 @include mat-core();
 
 $xmas-theme: mat-dark-theme($xmas-red, $xmas-green, $xmas-gold);
 
 @include angular-material-theme($xmas-theme);
 html {
-  background-color: rgba(19, 27, 61, 1);
+  background-color: #841d15;
 }
 
 body {
@@ -22,7 +24,7 @@ body {
     right: 0;
   }
   margin: 0;
-  background-color: rgb(255, 255, 255);
+  // background-color: rgb(255, 255, 255);
 }
 
 xmas-root {

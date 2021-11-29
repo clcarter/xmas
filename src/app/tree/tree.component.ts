@@ -11,12 +11,12 @@ import { IconRegistry } from '../ui/icon.service'
 @Component({
   selector: 'xmas-tree',
   template: ` <img
-    src="/assets/images/tree@2x.png"
+    src="https://xmas.s3.us-west-2.amazonaws.com/tree@2x.png"
     srcset="
-      /assets/images/tree@2x.png   2x,
-      /assets/images/tree.png      1x,
-      /assets/images/tree@1.5x.png 1.5x,
-      /assets/images/tree@3x.png   3x
+      https://xmas.s3.us-west-2.amazonaws.com/tree@2x.png   2x,
+      https://xmas.s3.us-west-2.amazonaws.com/tree.png      1x,
+      https://xmas.s3.us-west-2.amazonaws.com/tree@1.5x.png 1.5x,
+      https://xmas.s3.us-west-2.amazonaws.com/tree@3x.png   3x
     "
   />`,
   styleUrls: ['./tree.component.scss'],

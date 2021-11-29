@@ -1,29 +1,15 @@
 <div class="background">
   <ng-container *ngIf="icons.platformBrowser; else serverTemplate">
-    <xmas-tree *ngFor="let i of trees"></xmas-tree>
+    <!-- <xmas-tree *ngFor="let i of trees"></xmas-tree> -->
+    <video #video muted autoplay playsinline loop disableremoteplayback x-webkit-airplay="deny" height="100%">
+      <source src="https://xmas.s3.us-west-2.amazonaws.com/tree.mov" type="video/mp4">
+    </video>
   </ng-container>
   <ng-template #serverTemplate>
-    <xmas-tree id="tree"></xmas-tree>
+    <!-- <xmas-tree id="tree"></xmas-tree> -->
   </ng-template>
 </div>
 
-<main
-  *ngIf="icons.platformBrowser"
-  [xmasTitle]="outlet"
-  [@routeAnimations]="animate(outlet)"
->
+<main *ngIf="icons.platformBrowser" [xmasTitle]="outlet" [@routeAnimations]="animate(outlet)">
   <router-outlet #outlet="outlet"></router-outlet>
 </main>
-<footer [@gifterAnimate]="animate(gifterOutlet)">
-  <img
-    alt="Merry Christmas"
-    src="/assets/images/m-xmas@0.25x.jpg"
-    srcset="
-      /assets/images/m-xmas@0.25x.jpg 0.25x,
-      /assets/images/m-xmas@0.5x.jpg  0.5x,
-      /assets/images/m-xmas@0.75x.jpg 0.75x,
-      /assets/images/m-xmas.jpg       1x
-    "
-  />
-  <router-outlet #gifterOutlet="outlet" name="gifter"></router-outlet>
-</footer>

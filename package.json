@@ -27,6 +27,7 @@
     "@nguniversal/express-engine": "^11.2.1",
     "domino": "^2.1.6",
     "ng-animate": "1.0.0",
+    "page-flip": "^2.0.7",
     "rxjs": "^7.4.0",
     "zone.js": "~0.11.4"
   },
@@ -43,6 +44,7 @@
     "@types/jasmine": "^3.6.6",
     "@types/jasminewd2": "^2.0.8",
     "@types/node": "~14.14.34",
+    "@types/page-flip": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "4.16.1",
     "@typescript-eslint/eslint-plugin-tslint": "^4.17.0",
     "@typescript-eslint/parser": "4.16.1",

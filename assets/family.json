@@ -72,6 +72,13 @@
                 "Jessica & Jake": "Chantel & Jake",
                 "Nate & Amanda": "Stacie & Logan",
                 "Stacie & Logan": "Jessica & Jake"
+            },
+            "y2021": {
+                "Chantel & Jake": "Jessica & Jake",
+                "Chris & Eliza": "Stacie & Logan",
+                "Jessica & Jake": "Nate & Amanda",
+                "Nate & Amanda": "Chris & Eliza",
+                "Stacie & Logan": "Chantel & Jake"
             }
         },
         "randomized": true

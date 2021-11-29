@@ -1,8 +1,8 @@
 {
   "name": "Gift Exchange",
   "short_name": "xmas",
-  "theme_color": "#b90000",
-  "background_color": "#fafafa",
+  "theme_color": "#841d15",
+  "background_color": "#841d15",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",

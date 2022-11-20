@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-        NG_PERSISTENT_BUILD_CACHE: 1
+        NG_PERSISTENT_BUILD_CACHE: 0
 
     steps:
       - uses: actions/checkout@v3
@@ -31,7 +31,7 @@ jobs:
 
       - uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 7.9.0
           run_install: |
             args: [--frozen-lockfile, --strict-peer-dependencies]
 

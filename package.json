@@ -2,12 +2,12 @@
   "name": "xmas",
   "version": "0.0.0",
   "scripts": {
-    "ng": "npx ng",
-    "start": "npx ng serve --hmr",
-    "build:appShell": "npx ng run xmas:app-shell --configuration production",
-    "test": "npx ng test",
-    "lint": "npx ng lint",
-    "build": "npx ng build"
+    "ng": "pnpm exec ng",
+    "start": "pnpm exec ng serve --hmr",
+    "build:appShell": "pnpm exec ng run xmas:app-shell",
+    "test": "pnpm exec ng test",
+    "lint": "pnpm exec ng lint",
+    "build": "pnpm exec ng build"
   },
   "private": true,
   "dependencies": {

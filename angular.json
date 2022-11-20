@@ -139,6 +139,7 @@
         },
         "app-shell": {
           "builder": "@angular-devkit/build-angular:app-shell",
+          "defaultConfiguration": "production",
           "options": {
             "browserTarget": "xmas:build",
             "serverTarget": "xmas:server",

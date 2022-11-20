@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    timer(2000).subscribe(() => this.router.navigate(['2021']))
+    timer(2000).subscribe(() => this.router.navigate(['2022']))
   }
 
   ngAfterViewInit(): void {

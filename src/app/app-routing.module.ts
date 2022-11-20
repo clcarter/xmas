@@ -19,6 +19,12 @@ const routes: Routes = [
       import('./2021/y2021.module').then((m) => m.Y2021Module),
     data: { titleFragment: ' | 2021' },
   },
+  {
+    path: '2022',
+    loadChildren: () =>
+      import('./2022/y2022.module').then((m) => m.Y2022Module),
+    data: { titleFragment: ' | 2022' },
+  },
 ]
 
 @NgModule({

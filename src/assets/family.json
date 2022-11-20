@@ -2,11 +2,11 @@
     "carter": {
         "couples": null,
         "gifters": {
-            "Chantel & Jake": "Jessica & Jake",
-            "Chris & Eliza": "Stacie & Logan",
-            "Jessica & Jake": "Nate & Amanda",
-            "Nate & Amanda": "Chris & Eliza",
-            "Stacie & Logan": "Chantel & Jake"
+            "Chantel & Jake": "Stacie & Logan",
+            "Chris & Eliza": "Chantel & Jake",
+            "Jessica & Jake": "Chris & Eliza",
+            "Nate & Amanda": "Jessica & Jake",
+            "Stacie & Logan": "Nate & Amanda"
         },
         "participating": {
             "Nate & Amanda": "Nate & Amanda",
@@ -79,6 +79,13 @@
                 "Jessica & Jake": "Nate & Amanda",
                 "Nate & Amanda": "Chris & Eliza",
                 "Stacie & Logan": "Chantel & Jake"
+            },
+            "y2022": {
+                "Chantel & Jake": "Stacie & Logan",
+                "Chris & Eliza": "Chantel & Jake",
+                "Jessica & Jake": "Chris & Eliza",
+                "Nate & Amanda": "Jessica & Jake",
+                "Stacie & Logan": "Nate & Amanda"
             }
         },
         "randomized": true

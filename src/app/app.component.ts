@@ -25,16 +25,12 @@ import type { OnInit } from '@angular/core'
     ]),
   ],
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements AfterViewInit {
   @ViewChild('video', {read: ElementRef}) video!: ElementRef<HTMLVideoElement>
   constructor(
     private router: Router,
     public icons: IconRegistry,
   ) {}
-
-  ngOnInit(): void {
-    // timer(2000).subscribe(() => this.router.navigate(['2022']))
-  }
 
   ngAfterViewInit(): void {
     this.play()

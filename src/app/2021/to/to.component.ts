@@ -44,6 +44,7 @@ import { WindowRef } from '../../window.service'
   ],
   // eslint-disable-next-line @angular-eslint/no-host-metadata-property
   host: {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     '[@animate]': 'closeAnimation',
   },
 })

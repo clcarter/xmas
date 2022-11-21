@@ -1,5 +1,5 @@
 import { transition, trigger, useAnimation } from '@angular/animations';
-import { ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, ViewChild } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { slideInDown, slideOutDown, zoomIn } from 'ng-animate';
 import { timer } from 'rxjs';
@@ -25,23 +25,21 @@ import type { OnInit } from '@angular/core'
     ]),
   ],
 })
-export class AppComponent implements OnInit {
-  @ViewChild('video', {read: ElementRef}) video!: ElementRef<HTMLVideoElement> 
+export class AppComponent implements OnInit, AfterViewInit {
+  @ViewChild('video', {read: ElementRef}) video!: ElementRef<HTMLVideoElement>
   constructor(
     private router: Router,
     public icons: IconRegistry,
   ) {}
 
   ngOnInit(): void {
-    timer(2000).subscribe(() => this.router.navigate(['2022']))
+    // timer(2000).subscribe(() => this.router.navigate(['2022']))
   }
 
   ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
     this.play()
   }
-  
+
   play() {
     if(this.video) {
       this.video.nativeElement.muted = true

@@ -24,7 +24,7 @@ export class Y2018Component implements OnInit {
   constructor(private gift: GiftService, private router: Router) {}
 
   ngOnInit() {
-    this.gifters = this.gift.getGifters()
+    this.gifters = this.gift.getGifters(2018)
   }
 
   route(giver: DisplayGifters) {

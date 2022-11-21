@@ -23,14 +23,12 @@ export class Y2021Component implements OnInit {
   constructor(private giftService: GiftService, private router: Router, private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.isHandset$ = this.breakpointObserver.observe([
       Breakpoints.HandsetLandscape,
       Breakpoints.HandsetPortrait
     ]).pipe(map(result => result.matches))
 
-    this.gifters$ = this.giftService.gifters$
+    this.gifters$ = this.giftService.getGifters(2021)
   }
 
   navigate(gifter: DisplayGifters): void {

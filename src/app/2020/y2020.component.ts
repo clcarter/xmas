@@ -20,7 +20,7 @@ export class Y2020Component implements OnInit {
   constructor(private giftService: GiftService, private router: Router) { }
 
   ngOnInit(): void {
-    this.gifters$ = this.giftService.gifters$
+    this.gifters$ = this.giftService.getGifters(2020)
   }
 
   navigate(gifter: DisplayGifters): void {

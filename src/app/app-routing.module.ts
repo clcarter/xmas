@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core'
-import {RouterModule, Routes } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router'
 
 const routes: Routes = [
   {
@@ -25,16 +25,17 @@ const routes: Routes = [
       import('./2022/y2022.module').then((m) => m.Y2022Module),
     data: { titleFragment: ' | 2022' },
   },
+  { path: '**', redirectTo: '2022' }
 ]
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
       anchorScrolling: 'enabled',
-      onSameUrlNavigation: "ignore",
-      scrollPositionRestoration: "enabled",
+      onSameUrlNavigation: 'ignore',
+      scrollPositionRestoration: 'enabled',
     }),
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

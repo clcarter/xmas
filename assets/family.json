@@ -15,7 +15,7 @@
             "Chantel & Jake": "Chantel & Jake",
             "Stacie & Logan": "Stacie & Logan"
         },
-        "previousExchanges": {
+        "exchanges": {
             "y2013": {
                 "Amanda": "Chris",
                 "Chantel": "Nate",
@@ -39,52 +39,52 @@
                 "Stacie": "Chris & Eliza"
             },
             "y2016": {
-                "Chantel & Jake": "Chris & Eliza",
+                "Nate & Amanda": "Stacie",
                 "Chris & Eliza": "Nate & Amanda",
                 "Jessica": "Chantel & Jake",
-                "Nate & Amanda": "Stacie",
+                "Chantel & Jake": "Chris & Eliza",
                 "Stacie": "Jessica"
             },
             "y2017": {
-                "Chantel & Jake": "Jessica",
+                "Nate & Amanda": "Chris & Eliza",
                 "Chris & Eliza": "Stacie",
                 "Jessica": "Nate & Amanda",
-                "Nate & Amanda": "Chris & Eliza",
+                "Chantel & Jake": "Jessica",
                 "Stacie": "Chantel & Jake"
             },
             "y2018": {
-                "Chantel & Jake": "Stacie & Logan",
+                "Nate & Amanda": "Jessica",
                 "Chris & Eliza": "Chantel & Jake",
                 "Jessica": "Chris & Eliza",
-                "Nate & Amanda": "Jessica",
+                "Chantel & Jake": "Stacie & Logan",
                 "Stacie & Logan": "Nate & Amanda"
             },
             "y2019": {
-                "Chantel & Jake": "Nate & Amanda",
+                "Nate & Amanda": "Chantel & Jake",
                 "Chris & Eliza": "Jessica & Jake",
                 "Jessica & Jake": "Stacie & Logan",
-                "Nate & Amanda": "Chantel & Jake",
+                "Chantel & Jake": "Nate & Amanda",
                 "Stacie & Logan": "Chris & Eliza"
             },
             "y2020": {
-                "Chantel & Jake": "Chris & Eliza",
+                "Nate & Amanda": "Stacie & Logan",
                 "Chris & Eliza": "Nate & Amanda",
                 "Jessica & Jake": "Chantel & Jake",
-                "Nate & Amanda": "Stacie & Logan",
+                "Chantel & Jake": "Chris & Eliza",
                 "Stacie & Logan": "Jessica & Jake"
             },
             "y2021": {
-                "Chantel & Jake": "Jessica & Jake",
+                "Nate & Amanda": "Chris & Eliza",
                 "Chris & Eliza": "Stacie & Logan",
                 "Jessica & Jake": "Nate & Amanda",
-                "Nate & Amanda": "Chris & Eliza",
+                "Chantel & Jake": "Jessica & Jake",
                 "Stacie & Logan": "Chantel & Jake"
             },
             "y2022": {
-                "Chantel & Jake": "Stacie & Logan",
+                "Nate & Amanda": "Jessica & Jake",
                 "Chris & Eliza": "Chantel & Jake",
                 "Jessica & Jake": "Chris & Eliza",
-                "Nate & Amanda": "Jessica & Jake",
+                "Chantel & Jake": "Stacie & Logan",
                 "Stacie & Logan": "Nate & Amanda"
             }
         },
